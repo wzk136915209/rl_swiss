@@ -12,7 +12,7 @@ from rlkit.launchers.launcher_util import build_nested_variant_generator
 if __name__ == '__main__':
     # Arguments
     parser = argparse.ArgumentParser()
-    parser.add_argument('-e', '--experiment', help='experiment specification file')
+    parser.add_argument('-e', '--experiment', default='exp_specs/adv_irl.yaml', help='experiment specification file')
     parser.add_argument('--nosrun', help='don\'t use srun', action='store_true')
     args = parser.parse_args()
     with open(args.experiment, 'r') as spec_file:
